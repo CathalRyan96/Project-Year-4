@@ -2,6 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Meteor } from "meteor/meteor";
 import "./main.html";
+import { Tracker } from "meteor/tracker";
+
+import { Exercises } from "../import/api/exercises";
+console.log(Exercises.find().fetch());
+
+Tracker.autorun(function _Ready() {
+  console.log("Exercise List: " + Exercises.find().fetch());
+});
 
 const LIST = [
   { id: 1, name: "Press-Ups", set: "5 sets of 5" },
