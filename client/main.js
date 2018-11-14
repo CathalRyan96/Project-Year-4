@@ -7,13 +7,14 @@ Meteor.startup(function _startup() {
   let title = "Test App!";
   let name = "Cathal";
 
-  let html = (
-    <div>
-      <h2>{title}</h2>
-      <p>My name is {name}</p>
-      <p>test</p>
-    </div>
-  );
+  let App = () => {
+    return (
+      <div>
+        <h2>{title}</h2>
+        <p>Hello my name is {name}</p>
+      </div>
+    );
+  };
 
-  ReactDOM.render(html, document.getElementById("app"));
+  ReactDOM.render(<App />, document.getElementById("app"));
 });
