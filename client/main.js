@@ -4,19 +4,20 @@ import { Meteor } from "meteor/meteor";
 import "./main.html";
 
 const LIST = [
-  { id: 1, name: "Tom", score: 10 }, //<li>Tom, (10)</li>
-  { id: 2, name: "Joe", score: 20 },
-  { id: 3, name: "Jim", score: 30 },
-  { id: 1, name: "Bob", score: 40 }
+  { id: 1, name: "Press-Ups", set: "5 sets of 5" },
+  { id: 2, name: "Press-Ups", set: "5 sets of 5" },
+  { id: 3, name: "Press-Ups", set: "5 sets of 5" },
+  { id: 4, name: "Press-Ups", set: "5 sets of 5" },
+  { id: 5, name: "Press-Ups", set: "5 sets of 5" }
 ];
 
 Meteor.startup(function _startup() {
-  let title = "Test App!";
+  let title = "Exercise Tracker";
   let name = "Cathal";
 
   const List1 = props => (
     <li>
-      {props.name}, {props.score}
+      {props.name}, {props.set}
     </li>
   );
 
