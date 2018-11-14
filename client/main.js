@@ -22,7 +22,7 @@ Meteor.startup(function _startup() {
 
   const List2 = () => {
     return LIST.map(p => {
-      return <List1 name={p.name} score={p.score} />;
+      return <List1 key={p.id} {...p} />;
     });
   };
 
