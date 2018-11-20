@@ -1,4 +1,15 @@
 body {
   padding: 10px;
   font-family: sans-serif;
+  background: cyan;
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+ul {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
 }

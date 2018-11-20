@@ -37,7 +37,6 @@ Meteor.startup(function _startup() {
       return (
         <div>
           <h2>{title}</h2>
-          <p>Hello my name is {name}</p>
 
           <ul>
             <List2 />
