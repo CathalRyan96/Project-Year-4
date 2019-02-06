@@ -44,7 +44,7 @@ Meteor.startup(function _startup() {
         </div>
       );
     };
-
+    <Button variant="secondary">Secondary</Button>;
     ReactDOM.render(<App />, document.getElementById("app"));
   });
 });
