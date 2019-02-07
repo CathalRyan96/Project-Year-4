@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Meteor } from "meteor/meteor";
 import "./main.html";
 import { Tracker } from "meteor/tracker";
+import { Button } from "elemental";
 
 import { Exercises } from "../import/api/exercises";
 import Test from "./test";
@@ -42,6 +43,8 @@ Meteor.startup(function _startup() {
           <ul>
             <List2 />
           </ul>
+
+          <Button variant="secondary">Secondary</Button>
         </div>
       );
     };
