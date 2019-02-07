@@ -5,6 +5,7 @@ import "./main.html";
 import { Tracker } from "meteor/tracker";
 
 import { Exercises } from "../import/api/exercises";
+import Test from "./test";
 console.log(Exercises.find().fetch());
 
 const LIST = [
@@ -44,7 +45,6 @@ Meteor.startup(function _startup() {
         </div>
       );
     };
-    <Button variant="secondary">Secondary</Button>;
     ReactDOM.render(<App />, document.getElementById("app"));
   });
 });
