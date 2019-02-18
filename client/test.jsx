@@ -6,10 +6,12 @@ class Test extends Component {
     return (
       <div>
         <h1>Select Sports That You Play!</h1>
-        <Button variant="primary">Primary</Button>
-        <button>Soccer</button>
-        <button>Rugby</button>
-        <button>Gaelic Football</button>
+        <Button color="blue" size="lg" block>
+          Hurling
+        </Button>
+        <Button variant="primary">Soccer</Button>
+        <Button variant="primary">Rugby</Button>
+        <Button variant="primary">Gaelic Football</Button>
       </div>
     );
   }

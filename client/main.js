@@ -58,7 +58,7 @@ Meteor.startup(function _startup() {
     ReactDOM.render(
       <div>
         <Test />
-        <App />
+        {/*<App />*/}
       </div>,
       document.getElementById("app")
     );
