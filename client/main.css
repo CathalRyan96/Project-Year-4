@@ -2,6 +2,7 @@ body {
   padding: 10px;
   font-family: sans-serif;
   background: lightblue;
+  align-items: center;
 }
 
 h1 {
@@ -22,4 +23,5 @@ button {
   border-radius: 10px;
   align-content: center;
   background-color: yellowgreen;
+  align-items: center;
 }

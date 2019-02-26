@@ -3,10 +3,9 @@ import ReactDOM from "react-dom";
 import { Meteor } from "meteor/meteor";
 import "./main.html";
 import { Tracker } from "meteor/tracker";
-import Button from "@material-ui/core/Button";
-
 import { Exercises } from "../import/api/exercises";
 import Test from "./test";
+import { Navbar } from "react-bootstrap";
 console.log(Exercises.find().fetch());
 
 const LIST = [
@@ -47,16 +46,19 @@ Meteor.startup(function _startup() {
       );
     };
 
-    const Button = () => {
+    const AppBar = () => {
       return (
         <div>
-          <Button variant="secondary">Secondary</Button>
+          <Navbar expand="lg" variant="light" bg="dark">
+            <Navbar.Brand href="#">Navbar</Navbar.Brand>
+          </Navbar>
         </div>
       );
     };
 
     ReactDOM.render(
       <div>
+        <AppBar />
         <Test />
         {/*<App />*/}
       </div>,
