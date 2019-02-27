@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Meteor } from "meteor/meteor";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./main.html";
 import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
 import Test from "./test";
-import { Navbar } from "react-bootstrap";
+import NavBar from "./navbar";
 console.log(Exercises.find().fetch());
 
 const LIST = [
@@ -46,19 +47,9 @@ Meteor.startup(function _startup() {
       );
     };
 
-    const AppBar = () => {
-      return (
-        <div>
-          <Navbar expand="lg" variant="light" bg="dark">
-            <Navbar.Brand href="#">Navbar</Navbar.Brand>
-          </Navbar>
-        </div>
-      );
-    };
-
     ReactDOM.render(
       <div>
-        <AppBar />
+        <NavBar />
         <Test />
         {/*<App />*/}
       </div>,

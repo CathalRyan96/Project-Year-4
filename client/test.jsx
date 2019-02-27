@@ -9,9 +9,15 @@ class Test extends Component {
         <Button color="blue" size="lg" block>
           Hurling
         </Button>
-        <Button variant="primary">Soccer</Button>
-        <Button variant="primary">Rugby</Button>
-        <Button variant="primary">Gaelic Football</Button>
+        <Button color="blue" size="lg" block>
+          Soccer
+        </Button>
+        <Button color="blue" size="lg" block>
+          Football
+        </Button>
+        <Button color="blue" size="lg" block>
+          Rugby
+        </Button>
       </div>
     );
   }
