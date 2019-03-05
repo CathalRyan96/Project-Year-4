@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Meteor } from "meteor/meteor";
+import "./main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./main.html";
 import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
@@ -38,6 +40,8 @@ Meteor.startup(function _startup() {
     const App = () => {
       return (
         <div>
+          <link rel="stylesheet" href="main.css" />
+
           <h2>{title}</h2>
 
           <ul>

@@ -1,13 +1,14 @@
 body {
   padding: 10px;
   font-family: sans-serif;
-  background: lightblue;
+  background: lightcoral;
   align-items: center;
 }
 
 h1 {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
+  color: black;
 }
 
 ul {
