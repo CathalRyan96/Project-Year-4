@@ -9,6 +9,9 @@ class NavBar extends Component {
         </a>
         <form class="form-inline">
           <button class="btn btn-outline-secondary" type="button">
+            Home
+          </button>
+          <button class="btn btn-outline-secondary" type="button">
             About
           </button>
         </form>
