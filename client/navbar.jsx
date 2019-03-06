@@ -15,30 +15,11 @@ const About = () => {
 class NavBar extends Component {
   render() {
     return (
-      <Router>
-        <nav className="navbar navbar-dark bg-dark">
-          <a className="navbar-brand" href="#">
-            Exercise Application
-          </a>
-          <form class="form-inline">
-            <NavLink to="/" exact activeStyle={{ color: "green" }}>
-              Home
-            </NavLink>
-            <NavLink to="/About" exact activeStyle={{ color: "green" }}>
-              About
-            </NavLink>
-
-            <Route
-              path="/"
-              render={() => {
-                return <h1>Home</h1>;
-              }}
-            />
-
-            <Route path="/about" exact strict component={About} />
-          </form>
-        </nav>
-      </Router>
+      <nav className="navbar navbar-dark bg-dark">
+        <a className="navbar-brand" href="#">
+          Exercise Application
+        </a>
+      </nav>
     );
   }
 }
