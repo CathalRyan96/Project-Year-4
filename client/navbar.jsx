@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import "./about";
 
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 import Route from "react-router-dom/Route";
 
 const About = () => {
-  return <h1>About Info ...</h1>;
+  return (
+    <div>
+      <h1>About Info ...</h1>;
+    </div>
+  );
 };
 
 class NavBar extends Component {
@@ -17,8 +21,12 @@ class NavBar extends Component {
             Exercise Application
           </a>
           <form class="form-inline">
-            <Link to="/">Home</Link>
-            <Link to="/About">About</Link>
+            <NavLink to="/" exact activeStyle={{ color: "green" }}>
+              Home
+            </NavLink>
+            <NavLink to="/About" exact activeStyle={{ color: "green" }}>
+              About
+            </NavLink>
 
             <Route
               path="/"
