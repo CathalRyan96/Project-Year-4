@@ -9,6 +9,7 @@ import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
 import Test from "./test";
 import NavBar from "./navbar";
+
 console.log(Exercises.find().fetch());
 
 const LIST = [
