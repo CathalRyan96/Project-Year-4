@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Route from "react-router-dom/Route";
 
+const About = () => {
+  return <h1>About Info ...</h1>;
+};
+
 class NavBar extends Component {
   render() {
     return (
@@ -24,6 +28,8 @@ class NavBar extends Component {
                 return <h1>Home</h1>;
               }}
             />
+
+            <Route path="/about" exact strict component={About} />
           </form>
         </nav>
       </Router>
