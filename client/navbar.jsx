@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import "./about";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import Route from "react-router-dom/Route";
 
 const About = () => {
@@ -16,12 +17,9 @@ class NavBar extends Component {
             Exercise Application
           </a>
           <form class="form-inline">
-            <button class="btn btn-outline-secondary" type="button">
-              Home
-            </button>
-            <button class="btn btn-outline-secondary" type="button">
-              About
-            </button>
+            <Link to="/">Home</Link>
+            <Link to="/About">About</Link>
+
             <Route
               path="/"
               render={() => {
