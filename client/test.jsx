@@ -16,6 +16,10 @@ const About = () => {
 };
 
 class Test extends Component {
+  clicked() {
+    console.log("button was clicked");
+  }
+
   render() {
     return (
       <Router>
@@ -36,7 +40,7 @@ class Test extends Component {
 
           <Route path="/about" exact strict component={About} />
 
-          <Button color="blue" size="lg" block>
+          <Button onClick={this.clicked} color="blue" size="lg" block>
             Hurling
           </Button>
           <Button color="blue" size="lg" block>
