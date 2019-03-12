@@ -3,59 +3,101 @@ import { Button } from "react-bootstrap";
 import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 import Route from "react-router-dom/Route";
 
-const About = () => {
-  return (
-    <div>
-      <p1>
-        The purpose of this application is to help people find gym exercises
-        suitable to the the sports they play.
-      </p1>
-      ;
-    </div>
-  );
-};
+import ReactDOM from "react-dom";
+import { Meteor } from "meteor/meteor";
+import "./main.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./main.html";
+import { Tracker } from "meteor/tracker";
+import { Exercises } from "../import/api/exercises";
+import Test from "./test";
+import NavBar from "./navbar";
 
-class Test extends Component {
-  clicked() {
-    console.log("button was clicked");
-  }
+Meteor.startup(function _startup() {
+  Tracker.autorun(function _Ready() {
+    let title = "Exercise Tracker";
+    let name = "Cathal";
+    let ExerciseList = Exercises.find().fetch();
 
-  render() {
-    return (
-      <Router>
-        <div>
-          <NavLink to="/" exact activeStyle={{ color: "green" }}>
-            Home
-          </NavLink>
-          <NavLink to="/About" exact activeStyle={{ color: "green" }}>
-            About
-          </NavLink>
-
-          <Route
-            path="/"
-            render={() => {
-              return <h1>Select the Sports You Play</h1>;
-            }}
-          />
-
-          <Route path="/about" exact strict component={About} />
-
-          <Button onClick={this.clicked} color="blue" size="lg" block>
-            Hurling
-          </Button>
-          <Button color="blue" size="lg" block>
-            Soccer
-          </Button>
-          <Button color="blue" size="lg" block>
-            Football
-          </Button>
-          <Button color="blue" size="lg" block>
-            Rugby
-          </Button>
-        </div>
-      </Router>
+    const List1 = props => (
+      <li>
+        {props.name}, {props.set}
+      </li>
     );
-  }
-}
 
-export default Test;
+    const List2 = () => {
+      return ExerciseList.map(p => {
+        return <List1 key={p.id} {...p} />;
+      });
+    };
+
+    const App = () => {
+      return (
+        <div>
+          <link rel="stylesheet" href="main.css" />
+
+          <ul>
+            <List2 />
+          </ul>
+        </div>
+      );
+    };
+
+    const About = () => {
+      return (
+        <div>
+          <h2>
+            The purpose of this application is to help people find gym exercises
+            suitable to the the sports they play.
+          </h2>
+          ;
+        </div>
+      );
+    };
+
+    class Test extends Component {
+      clicked() {
+        console.log("button was clicked");
+      }
+
+      render() {
+        return (
+          <Router>
+            <div>
+              <NavLink to="/" exact activeStyle={{ color: "green" }}>
+                Home
+              </NavLink>
+              <NavLink to="/About" exact activeStyle={{ color: "green" }}>
+                About
+              </NavLink>
+
+              <Route
+                path="/"
+                render={() => {
+                  return <h1>Select the Sports You Play</h1>;
+                }}
+              />
+
+              <Route path="/about" exact strict component={About} />
+
+              <Button onClick={this.App} color="blue" size="lg" block>
+                Hurling
+              </Button>
+              <Button color="blue" size="lg" block>
+                Soccer
+              </Button>
+              <Button color="blue" size="lg" block>
+                Football
+              </Button>
+              <Button color="blue" size="lg" block>
+                Rugby
+              </Button>
+            </div>
+          </Router>
+        );
+      }
+    }
+
+    export default Test;
+  });
+});
