@@ -56,8 +56,18 @@ Meteor.startup(function _startup() {
     };
 
     class Test extends Component {
-      clicked() {
-        console.log("button was clicked");
+      constructor(props) {
+        super(props);
+        this.state = {
+          showComponent: false
+        };
+        this._onButtonClick = this._onButtonClick.bind(this);
+      }
+
+      _onButtonClick() {
+        this.setState({
+          showComponent: true
+        });
       }
 
       render() {
@@ -80,9 +90,15 @@ Meteor.startup(function _startup() {
 
               <Route path="/about" exact strict component={About} />
 
-              <Button onClick={this.App} color="blue" size="lg" block>
+              <Button
+                onClick={this.state._onButtonClick}
+                color="blue"
+                size="lg"
+                block
+              >
                 Hurling
               </Button>
+              {this.state.showComponent ? <List2 /> : null}
               <Button color="blue" size="lg" block>
                 Soccer
               </Button>
