@@ -20,6 +20,21 @@ const LIST = [
   { id: 5, name: "Press-Ups", set: "5 sets of 5" }
 ];
 
+state = {
+  sports: [
+    { id: "fdsd", title: "Sport 1" },
+    { id: "asdf", title: "Sport 2" },
+    { id: "afdsf", title: "Sport 3" }
+  ],
+  displaySports: false
+};
+
+displaySports = () => {
+  this.setState({
+    displaySports: !this.state.displaySports
+  });
+};
+
 Meteor.startup(function _startup() {
   Tracker.autorun(function _Ready() {
     let title = "Exercise Tracker";
@@ -52,9 +67,27 @@ Meteor.startup(function _startup() {
       );
     };
 
+    const Testing = () => {
+      return (
+        <button className="btn" onClick={this.displaySports}>
+          View Sports
+        </button>
+      );
+    };
+
     ReactDOM.render(
       <div>
         <NavBar />
+        if (this.state.displaySports)
+        {
+          (sports = (
+            <div>
+              {this.state.sports.map((sport, index) => {
+                return <Sport key={sport.id} title={sport.title} />;
+              })}
+            </div>
+          ))
+        }
         <Test />
         {/*<App />*/}
       </div>,

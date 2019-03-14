@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./main.html";
 import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
-import Test from "./test";
+import Testing from "./testing";
 import NavBar from "./navbar";
 
 Meteor.startup(function _startup() {
