@@ -19,6 +19,34 @@ Meteor.startup(function _startup() {
     let name = "Cathal";
     let ExerciseList = Exercises.find().fetch();
 
+    const Title = () => {
+      return (
+        <div className="title">
+          <NavLink to="/list">
+            <Button color="blue" size="lg" block>
+              Show List
+            </Button>
+          </NavLink>
+        </div>
+      );
+    };
+
+    const List = () => {
+      return (
+        <div className="nav">
+          <ul>
+            <li>list item</li>
+            <li>list item</li>
+          </ul>
+          <NavLink to="/">
+            <Button color="blue" size="lg" block>
+              Home
+            </Button>
+          </NavLink>
+        </div>
+      );
+    };
+
     const List1 = props => (
       <li>
         {props.name}, {props.set}
@@ -90,6 +118,12 @@ Meteor.startup(function _startup() {
 
               <Route path="/about" exact strict component={About} />
 
+              <Router>
+                <div>
+                  <Route exact path="/" component={Title} />
+                  <Route path="/list" component={List} />
+                </div>
+              </Router>
               <Button
                 onClick={this.state._onButtonClick}
                 color="blue"

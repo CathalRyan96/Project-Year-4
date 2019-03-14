@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Meteor } from "meteor/meteor";
 import "./main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,21 +21,6 @@ const LIST = [
   { id: 5, name: "Press-Ups", set: "5 sets of 5" }
 ];
 
-state = {
-  sports: [
-    { id: "fdsd", title: "Sport 1" },
-    { id: "asdf", title: "Sport 2" },
-    { id: "afdsf", title: "Sport 3" }
-  ],
-  displaySports: false
-};
-
-displaySports = () => {
-  this.setState({
-    displaySports: !this.state.displaySports
-  });
-};
-
 Meteor.startup(function _startup() {
   Tracker.autorun(function _Ready() {
     let title = "Exercise Tracker";
@@ -51,6 +37,30 @@ Meteor.startup(function _startup() {
       return ExerciseList.map(p => {
         return <List1 key={p.id} {...p} />;
       });
+    };
+
+    const Title = () => {
+      return (
+        <div className="title">
+          <NavLink to="/list">
+            <button>Show the List</button>
+          </NavLink>
+        </div>
+      );
+    };
+
+    const List = () => {
+      return (
+        <div className="nav">
+          <ul>
+            <li>list item</li>
+            <li>list item</li>
+          </ul>
+          <NavLink to="/">
+            <button>Back Home</button>
+          </NavLink>
+        </div>
+      );
     };
 
     const App = () => {
@@ -78,16 +88,7 @@ Meteor.startup(function _startup() {
     ReactDOM.render(
       <div>
         <NavBar />
-        if (this.state.displaySports)
-        {
-          (sports = (
-            <div>
-              {this.state.sports.map((sport, index) => {
-                return <Sport key={sport.id} title={sport.title} />;
-              })}
-            </div>
-          ))
-        }
+
         <Test />
         {/*<App />*/}
       </div>,
