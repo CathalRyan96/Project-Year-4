@@ -19,6 +19,18 @@ Meteor.startup(function _startup() {
     let name = "Cathal";
     let ExerciseList = Exercises.find().fetch();
 
+    const List1 = props => (
+      <li>
+        {props.name}, {props.set}
+      </li>
+    );
+
+    const List2 = () => {
+      return ExerciseList.map(p => {
+        return <List1 key={p.id} {...p} />;
+      });
+    };
+
     const Title = () => {
       return (
         <div className="title">
@@ -45,18 +57,6 @@ Meteor.startup(function _startup() {
           </NavLink>
         </div>
       );
-    };
-
-    const List1 = props => (
-      <li>
-        {props.name}, {props.set}
-      </li>
-    );
-
-    const List2 = () => {
-      return ExerciseList.map(p => {
-        return <List1 key={p.id} {...p} />;
-      });
     };
 
     const App = () => {
@@ -102,6 +102,7 @@ Meteor.startup(function _startup() {
         return (
           <Router>
             <div>
+              <App />
               <NavLink to="/" exact activeStyle={{ color: "green" }}>
                 Home
               </NavLink>

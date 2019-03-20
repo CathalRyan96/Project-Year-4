@@ -23,7 +23,7 @@ const LIST = [
 
 Meteor.startup(function _startup() {
   Tracker.autorun(function _Ready() {
-    let title = "Exercise Tracker";
+    let title = "Exercises";
     let name = "Cathal";
     let ExerciseList = Exercises.find().fetch();
 
@@ -90,7 +90,13 @@ Meteor.startup(function _startup() {
         <NavBar />
 
         <Test />
-        {/*<App />*/}
+        <Router>
+          <div>
+            <Route exact path="/" component={Title} />
+            <Route path="/list" component={List2} />
+          </div>
+        </Router>
+        <App />
       </div>,
       document.getElementById("app")
     );
