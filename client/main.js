@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Button } from "react-bootstrap";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Meteor } from "meteor/meteor";
-import "./main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./main.css";
 
 import "./main.html";
 import { Tracker } from "meteor/tracker";
@@ -12,14 +13,6 @@ import Test from "./test";
 import NavBar from "./navbar";
 
 console.log(Exercises.find().fetch());
-
-const LIST = [
-  { id: 1, name: "Press-Ups", set: "5 sets of 5" },
-  { id: 2, name: "Press-Ups", set: "5 sets of 5" },
-  { id: 3, name: "Press-Ups", set: "5 sets of 5" },
-  { id: 4, name: "Press-Ups", set: "5 sets of 5" },
-  { id: 5, name: "Press-Ups", set: "5 sets of 5" }
-];
 
 Meteor.startup(function _startup() {
   Tracker.autorun(function _Ready() {
@@ -43,7 +36,7 @@ Meteor.startup(function _startup() {
       return (
         <div className="title">
           <NavLink to="/list">
-            <button>Show the List</button>
+            <Button>Show the List</Button>
           </NavLink>
         </div>
       );
@@ -66,7 +59,7 @@ Meteor.startup(function _startup() {
     const App = () => {
       return (
         <div>
-          <link rel="stylesheet" href="main.css" />
+          {/*<link rel="stylesheet" href="main.css" />*/}
 
           <h2>{title}</h2>
 
@@ -96,7 +89,7 @@ Meteor.startup(function _startup() {
             <Route path="/list" component={List2} />
           </div>
         </Router>
-        <App />
+        {/*<App />*/}
       </div>,
       document.getElementById("app")
     );
