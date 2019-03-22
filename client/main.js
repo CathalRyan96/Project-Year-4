@@ -36,7 +36,18 @@ Meteor.startup(function _startup() {
       return (
         <div className="title">
           <NavLink to="/list">
-            <Button>Show the List</Button>
+            <Button color="blue" size="lg" block>
+              Hurling Exercises
+            </Button>
+            <Button color="blue" size="lg" block>
+              Gaelic Football Exercises
+            </Button>
+            <Button color="blue" size="lg" block>
+              Rugby Exercises
+            </Button>
+            <Button color="blue" size="lg" block>
+              Soccer Exercises
+            </Button>
           </NavLink>
         </div>
       );

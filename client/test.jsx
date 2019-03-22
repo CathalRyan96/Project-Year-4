@@ -31,12 +31,12 @@ Meteor.startup(function _startup() {
       });
     };
 
-    const Title = () => {
+    /*const Title = () => {
       return (
         <div className="title">
           <NavLink to="/list">
             <Button color="blue" size="lg" block>
-              Show List
+              Hurling Exercises
             </Button>
           </NavLink>
         </div>
@@ -58,7 +58,7 @@ Meteor.startup(function _startup() {
         </div>
       );
     };
-
+    */
     const App = () => {
       return (
         <div>
@@ -119,22 +119,15 @@ Meteor.startup(function _startup() {
 
               <Route path="/about" exact strict component={About} />
 
-              <Router>
+              {/*<Router>
                 <div>
                   <Route exact path="/" component={Title} />
                   <Route path="/list" component={List} />
                 </div>
-              </Router>
-              <Button
-                onClick={this.state._onButtonClick}
-                color="blue"
-                size="lg"
-                block
-              >
-                Hurling
-              </Button>
+              </Router>*/}
+
               {this.state.showComponent ? <List2 /> : null}
-              <Button color="blue" size="lg" block>
+              {/*<Button color="blue" size="lg" block>
                 Soccer
               </Button>
               <Button color="blue" size="lg" block>
@@ -142,7 +135,7 @@ Meteor.startup(function _startup() {
               </Button>
               <Button color="blue" size="lg" block>
                 Rugby
-              </Button>
+            </Button>*/}
             </div>
           </Router>
         );
