@@ -30,3 +30,8 @@ button {
 nav {
   color: darkblue;
 }
+
+.show > .dropdown-menu {
+  display: block;
+  position: absolute;
+}
