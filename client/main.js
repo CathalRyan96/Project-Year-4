@@ -9,6 +9,7 @@ import "./main.css";
 import "./main.html";
 import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
+import { Rugby } from "../import/api/Rugby";
 import Test from "./test";
 import NavBar from "./navbar";
 
@@ -31,6 +32,24 @@ Meteor.startup(function _startup() {
         return <List1 key={p.id} {...p} />;
       });
     };
+
+    Meteor.startup(function _startup() {
+      Tracker.autorun(function _Ready() {
+        let RugbyList = Rugby.find().fetch();
+
+        const List3 = props => (
+          <li>
+            {props.name}, {props.set}
+          </li>
+        );
+
+        const List4 = () => {
+          return RugbyList.map(p => {
+            return <List3 key={p.id} {...p} />;
+          });
+        };
+      });
+    });
 
     const Title = () => {
       return (
