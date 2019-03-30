@@ -33,6 +33,20 @@ Meteor.startup(function _startup() {
       });
     };
 
+    let RugbyList = Rugby.find().fetch();
+
+    const List3 = props => (
+      <li>
+        {props.name}, {props.set}
+      </li>
+    );
+
+    const List4 = () => {
+      return RugbyList.map(p => {
+        return <List3 key={p.id} {...p} />;
+      });
+    };
+
     Tracker.autorun(function _Ready() {
       let RugbyList = Rugby.find().fetch();
 
@@ -79,10 +93,6 @@ Meteor.startup(function _startup() {
     const List = () => {
       return (
         <div className="nav">
-          <ul>
-            <li>list item</li>
-            <li>list item</li>
-          </ul>
           <NavLink to="/">
             <button>Back Home</button>
           </NavLink>
@@ -113,7 +123,7 @@ Meteor.startup(function _startup() {
           <div>
             <Route exact path="/" component={Title} />
             <Route path="/hurling" component={List2} />
-            <Route path="/list2" component={List2} />
+            <Route path="/gaelic" component={List4} />
           </div>
         </Router>
         {/*<App />*/}
