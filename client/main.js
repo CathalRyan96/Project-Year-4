@@ -52,21 +52,24 @@ Meteor.startup(function _startup() {
     const Title = () => {
       return (
         <div className="title">
-          <NavLink to="/list">
+          <NavLink to="/hurling">
             <Button color="blue" size="lg" block>
               Hurling Exercises
             </Button>
-            <NavLink to="list2">
+            <NavLink to="gaelic">
               <Button color="blue" size="lg" block>
                 Gaelic Football Exercises
               </Button>
-
-              <Button color="blue" size="lg" block>
-                Rugby Exercises
-              </Button>
-              <Button color="blue" size="lg" block>
-                Soccer Exercises
-              </Button>
+              <NavLink to="rugby">
+                <Button color="blue" size="lg" block>
+                  Rugby Exercises
+                </Button>
+                <NavLink to="soccer">
+                  <Button color="blue" size="lg" block>
+                    Soccer Exercises
+                  </Button>
+                </NavLink>
+              </NavLink>
             </NavLink>
           </NavLink>
         </div>
@@ -109,7 +112,7 @@ Meteor.startup(function _startup() {
         <Router>
           <div>
             <Route exact path="/" component={Title} />
-            <Route path="/list" component={List2} />
+            <Route path="/hurling" component={List2} />
             <Route path="/list2" component={List2} />
           </div>
         </Router>
