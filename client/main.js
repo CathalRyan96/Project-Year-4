@@ -33,22 +33,20 @@ Meteor.startup(function _startup() {
       });
     };
 
-    Meteor.startup(function _startup() {
-      Tracker.autorun(function _Ready() {
-        let RugbyList = Rugby.find().fetch();
+    Tracker.autorun(function _Ready() {
+      let RugbyList = Rugby.find().fetch();
 
-        const List3 = props => (
-          <li>
-            {props.name}, {props.set}
-          </li>
-        );
+      const List3 = props => (
+        <li>
+          {props.name}, {props.set}
+        </li>
+      );
 
-        const List4 = () => {
-          return RugbyList.map(p => {
-            return <List3 key={p.id} {...p} />;
-          });
-        };
-      });
+      const List4 = () => {
+        return RugbyList.map(p => {
+          return <List3 key={p.id} {...p} />;
+        });
+      };
     });
 
     const Title = () => {
@@ -103,14 +101,6 @@ Meteor.startup(function _startup() {
       );
     };
 
-    const Testing = () => {
-      return (
-        <button className="btn" onClick={this.displaySports}>
-          View Sports
-        </button>
-      );
-    };
-
     ReactDOM.render(
       <div>
         <NavBar />
@@ -120,7 +110,7 @@ Meteor.startup(function _startup() {
           <div>
             <Route exact path="/" component={Title} />
             <Route path="/list" component={List2} />
-            <Route path="/list2" component={List4} />
+            <Route path="/list2" component={List2} />
           </div>
         </Router>
         {/*<App />*/}
