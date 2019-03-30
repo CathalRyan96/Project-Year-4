@@ -58,15 +58,18 @@ Meteor.startup(function _startup() {
             <Button color="blue" size="lg" block>
               Hurling Exercises
             </Button>
-            <Button color="blue" size="lg" block>
-              Gaelic Football Exercises
-            </Button>
-            <Button color="blue" size="lg" block>
-              Rugby Exercises
-            </Button>
-            <Button color="blue" size="lg" block>
-              Soccer Exercises
-            </Button>
+            <NavLink to="list2">
+              <Button color="blue" size="lg" block>
+                Gaelic Football Exercises
+              </Button>
+
+              <Button color="blue" size="lg" block>
+                Rugby Exercises
+              </Button>
+              <Button color="blue" size="lg" block>
+                Soccer Exercises
+              </Button>
+            </NavLink>
           </NavLink>
         </div>
       );
@@ -117,6 +120,7 @@ Meteor.startup(function _startup() {
           <div>
             <Route exact path="/" component={Title} />
             <Route path="/list" component={List2} />
+            <Route path="/list2" component={List4} />
           </div>
         </Router>
         {/*<App />*/}
