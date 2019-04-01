@@ -10,6 +10,7 @@ import "./main.html";
 import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
 import { Rugby } from "../import/api/Rugby";
+import { Gaelic } from "../import/api/Gaelic";
 import Test from "./test";
 import NavBar from "./navbar";
 
@@ -47,21 +48,19 @@ Meteor.startup(function _startup() {
       });
     };
 
-    Tracker.autorun(function _Ready() {
-      let RugbyList = Rugby.find().fetch();
+    let GaelicList = Gaelic.find().fetch();
 
-      const List3 = props => (
-        <li>
-          {props.name}, {props.set}
-        </li>
-      );
+    const List5 = props => (
+      <li>
+        {props.name}, {props.set}
+      </li>
+    );
 
-      const List4 = () => {
-        return RugbyList.map(p => {
-          return <List3 key={p.id} {...p} />;
-        });
-      };
-    });
+    const List6 = () => {
+      return GaelicList.map(p => {
+        return <List5 key={p.id} {...p} />;
+      });
+    };
 
     const Title = () => {
       return (
@@ -124,6 +123,7 @@ Meteor.startup(function _startup() {
             <Route exact path="/" component={Title} />
             <Route path="/hurling" component={List2} />
             <Route path="/gaelic" component={List4} />
+            <Route path="/rugby" component={List6} />
           </div>
         </Router>
         {/*<App />*/}

@@ -1,5 +1,6 @@
 import { Exercises } from "../import/api/exercises";
 import { Rugby } from "../import/api/Rugby";
+
 import { Meteor } from "meteor/meteor";
 
 /*Meteor.startup(function _serverReady() {
