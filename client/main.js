@@ -122,8 +122,8 @@ Meteor.startup(function _startup() {
           <div>
             <Route exact path="/" component={Title} />
             <Route path="/hurling" component={List2} />
-            <Route path="/gaelic" component={List4} />
-            <Route path="/rugby" component={List6} />
+            <Route path="/gaelic" component={List6} />
+            <Route path="/rugby" component={List4} />
           </div>
         </Router>
         {/*<App />*/}
