@@ -11,6 +11,7 @@ import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
 import { Rugby } from "../import/api/Rugby";
 import { Gaelic } from "../import/api/Gaelic";
+import { Soccer } from "../import/api/Soccer";
 import Test from "./test";
 import NavBar from "./navbar";
 
@@ -59,6 +60,20 @@ Meteor.startup(function _startup() {
     const List6 = () => {
       return GaelicList.map(p => {
         return <List5 key={p.id} {...p} />;
+      });
+    };
+
+    let SoccerList = Soccer.find().fetch();
+
+    const List7 = props => (
+      <li>
+        {props.name}, {props.set}
+      </li>
+    );
+
+    const List8 = () => {
+      return SoccerList.map(p => {
+        return <List7 key={p.id} {...p} />;
       });
     };
 
@@ -124,6 +139,7 @@ Meteor.startup(function _startup() {
             <Route path="/hurling" component={List2} />
             <Route path="/gaelic" component={List6} />
             <Route path="/rugby" component={List4} />
+            <Route path="/soccer" component={List8} />
           </div>
         </Router>
         {/*<App />*/}
