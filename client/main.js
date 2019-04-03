@@ -31,9 +31,17 @@ Meteor.startup(function _startup() {
     let ExerciseList = Exercises.find().fetch();
 
     const List1 = props => (
-      <li>
-        {props.name}, {props.set}
-      </li>
+      <div
+        style={{
+          background: "pink",
+          textAlign: "center",
+          fontFamily: "Helvetica"
+        }}
+      >
+        <li>
+          {props.name}, {props.set}
+        </li>
+      </div>
     );
 
     const List2 = () => {
@@ -45,9 +53,17 @@ Meteor.startup(function _startup() {
     let RugbyList = Rugby.find().fetch();
 
     const List3 = props => (
-      <li>
-        {props.name}, {props.set}
-      </li>
+      <div
+        style={{
+          background: "pink",
+          textAlign: "center",
+          fontFamily: "Helvetica"
+        }}
+      >
+        <li>
+          {props.name}, {props.set}
+        </li>
+      </div>
     );
 
     const List4 = () => {
@@ -59,9 +75,17 @@ Meteor.startup(function _startup() {
     let GaelicList = Gaelic.find().fetch();
 
     const List5 = props => (
-      <li>
-        {props.name}, {props.set}
-      </li>
+      <div
+        style={{
+          background: "pink",
+          textAlign: "center",
+          fontFamily: "Helvetica"
+        }}
+      >
+        <li>
+          {props.name}, {props.set}
+        </li>
+      </div>
     );
 
     const List6 = () => {
@@ -73,9 +97,17 @@ Meteor.startup(function _startup() {
     let SoccerList = Soccer.find().fetch();
 
     const List7 = props => (
-      <li>
-        {props.name}, {props.set}
-      </li>
+      <div
+        style={{
+          background: "pink",
+          textAlign: "center",
+          fontFamily: "Helvetica"
+        }}
+      >
+        <li>
+          {props.name}, {props.set}
+        </li>
+      </div>
     );
 
     const List8 = () => {
@@ -87,17 +119,17 @@ Meteor.startup(function _startup() {
     const Title = () => {
       return (
         <div className="title">
-          <div style={{ padding: "40px" }}>
+          <div style={{ padding: "40px 20px" }}>
             <NavLink to="/hurling">
               <Button variant="primary" size="lg" block>
                 Hurling Exercises
               </Button>
-              <div style={{ padding: "40px" }}>
+              <div style={{ padding: "40px 20px" }}>
                 <NavLink to="gaelic">
                   <Button color="blue" size="lg" block>
                     Gaelic Football Exercises
                   </Button>
-                  <div style={{ padding: "40px" }}>
+                  <div style={{ padding: "40px 20px" }}>
                     <NavLink to="rugby">
                       <Button color="blue" size="lg" block>
                         Rugby Exercises
