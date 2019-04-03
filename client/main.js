@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import { Button } from "react-bootstrap";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Meteor } from "meteor/meteor";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./Button.css";
 import "./main.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./main.html";
 import { Tracker } from "meteor/tracker";
@@ -16,6 +17,12 @@ import Test from "./test";
 import NavBar from "./navbar";
 
 console.log(Exercises.find().fetch());
+
+<link type="text/css" href="./main.css" />;
+
+const buttonStyle = {
+  padding: "20px"
+};
 
 Meteor.startup(function _startup() {
   Tracker.autorun(function _Ready() {
@@ -80,26 +87,34 @@ Meteor.startup(function _startup() {
     const Title = () => {
       return (
         <div className="title">
-          <NavLink to="/hurling">
-            <Button color="blue" size="lg" block>
-              Hurling Exercises
-            </Button>
-            <NavLink to="gaelic">
-              <Button color="blue" size="lg" block>
-                Gaelic Football Exercises
+          <div style={{ padding: "40px" }}>
+            <NavLink to="/hurling">
+              <Button variant="primary" size="lg" block>
+                Hurling Exercises
               </Button>
-              <NavLink to="rugby">
-                <Button color="blue" size="lg" block>
-                  Rugby Exercises
-                </Button>
-                <NavLink to="soccer">
+              <div style={{ padding: "40px" }}>
+                <NavLink to="gaelic">
                   <Button color="blue" size="lg" block>
-                    Soccer Exercises
+                    Gaelic Football Exercises
                   </Button>
+                  <div style={{ padding: "40px" }}>
+                    <NavLink to="rugby">
+                      <Button color="blue" size="lg" block>
+                        Rugby Exercises
+                      </Button>
+                      <div style={{ padding: "40px" }}>
+                        <NavLink to="soccer">
+                          <Button color="blue" size="lg" block>
+                            Soccer Exercises
+                          </Button>
+                        </NavLink>
+                      </div>
+                    </NavLink>
+                  </div>
                 </NavLink>
-              </NavLink>
+              </div>
             </NavLink>
-          </NavLink>
+          </div>
         </div>
       );
     };
