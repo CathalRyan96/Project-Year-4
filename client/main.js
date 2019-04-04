@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Button } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Meteor } from "meteor/meteor";
 import "./Button.css";
@@ -33,9 +33,12 @@ Meteor.startup(function _startup() {
     const List1 = props => (
       <div
         style={{
-          background: "pink",
+          background: "cyan",
           textAlign: "center",
-          fontFamily: "Helvetica"
+          fontFamily: "Helvetica",
+          fontSize: "25px",
+          margin: "20px",
+          border: "5px solid"
         }}
       >
         <li>
@@ -57,7 +60,10 @@ Meteor.startup(function _startup() {
         style={{
           background: "pink",
           textAlign: "center",
-          fontFamily: "Helvetica"
+          fontFamily: "Helvetica",
+          fontSize: "25px",
+          margin: "20px",
+          border: "5px solid"
         }}
       >
         <li>
@@ -79,7 +85,10 @@ Meteor.startup(function _startup() {
         style={{
           background: "pink",
           textAlign: "center",
-          fontFamily: "Helvetica"
+          fontFamily: "Helvetica",
+          fontSize: "25px",
+          margin: "20px",
+          border: "5px solid"
         }}
       >
         <li>
@@ -101,7 +110,10 @@ Meteor.startup(function _startup() {
         style={{
           background: "pink",
           textAlign: "center",
-          fontFamily: "Helvetica"
+          fontFamily: "Helvetica",
+          fontSize: "25px",
+          margin: "20px",
+          border: "5px solid"
         }}
       >
         <li>
