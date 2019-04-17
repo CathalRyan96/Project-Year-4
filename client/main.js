@@ -44,6 +44,9 @@ Meteor.startup(function _startup() {
         <li>
           {props.name}, {props.set}
         </li>
+        <NavLink to="/">
+          <Button> Home</Button>
+        </NavLink>
       </div>
     );
 
@@ -66,6 +69,9 @@ Meteor.startup(function _startup() {
           border: "5px solid"
         }}
       >
+        <NavLink to="/">
+          <Button> Home</Button>
+        </NavLink>
         <li>
           {props.name}, {props.set}
         </li>
@@ -91,6 +97,9 @@ Meteor.startup(function _startup() {
           border: "5px solid"
         }}
       >
+        <NavLink to="/">
+          <Button> Home</Button>
+        </NavLink>
         <li>
           {props.name}, {props.set}
         </li>
@@ -116,6 +125,9 @@ Meteor.startup(function _startup() {
           border: "5px solid"
         }}
       >
+        <NavLink to="/">
+          <Button> Home</Button>
+        </NavLink>
         <li>
           {props.name}, {props.set}
         </li>
