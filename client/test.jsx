@@ -103,12 +103,6 @@ Meteor.startup(function _startup() {
           <Router>
             <div>
               <App />
-              <NavLink to="/" exact activeStyle={{ color: "green" }}>
-                Home
-              </NavLink>
-              <NavLink to="/About" exact activeStyle={{ color: "green" }}>
-                About
-              </NavLink>
 
               <Route
                 path="/"

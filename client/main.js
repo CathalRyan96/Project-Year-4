@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Meteor } from "meteor/meteor";
 import "./Button.css";
 import "./main.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./main.html";
