@@ -16,6 +16,7 @@ import { Gaelic } from "../import/api/Gaelic";
 import { Soccer } from "../import/api/Soccer";
 import Test from "./test";
 import NavBar from "./navbar";
+import Welcome from "./Welcome";
 
 console.log(Exercises.find().fetch());
 
@@ -30,6 +31,34 @@ Meteor.startup(function _startup() {
     let title = "Exercises";
     let name = "Cathal";
     let ExerciseList = Exercises.find().fetch();
+
+    const AddUser = () => {
+      return (
+        <body
+          style={{
+            textAlign: "center"
+          }}
+        >
+          <form
+            style={{
+              border: "1px",
+              padding: "20px 20px",
+              background: "grey",
+              display: "inline-block"
+            }}
+          >
+            <input type="text" />
+            <Button
+              style={{
+                padding: "20px 12px"
+              }}
+            >
+              Add User
+            </Button>
+          </form>
+        </body>
+      );
+    };
 
     const List1 = props => (
       <div
@@ -203,6 +232,8 @@ Meteor.startup(function _startup() {
     ReactDOM.render(
       <div>
         <NavBar />
+        <Welcome />
+        <AddUser />
 
         <Test />
         <Router>
