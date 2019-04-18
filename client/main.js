@@ -230,11 +230,15 @@ Meteor.startup(function _startup() {
       );
     };
 
+    onSubmit = fields => {
+      console.log("coming from main.js: ", fields);
+    };
+
     ReactDOM.render(
       <div>
         <NavBar />
         {/*<Welcome />*/}
-        <Form />
+        <Form onSubmit={fields => this.onSubmit(fields)} />
         {/*<AddUser />*/}
 
         <Test />
