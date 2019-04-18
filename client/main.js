@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Meteor } from "meteor/meteor";
 import "./Button.css";
 import "./main.css";
+import Form from "./Form";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -232,8 +233,9 @@ Meteor.startup(function _startup() {
     ReactDOM.render(
       <div>
         <NavBar />
-        <Welcome />
-        <AddUser />
+        {/*<Welcome />*/}
+        <Form />
+        {/*<AddUser />*/}
 
         <Test />
         <Router>
