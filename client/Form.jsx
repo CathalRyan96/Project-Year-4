@@ -1,28 +1,44 @@
-import React, { Component } from "react";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap";
 
-class Form extends React.Component {
+export default class Form extends React.Component {
   state = {
     name: ""
   };
 
+  change = e => {
+    this.props.onChange({ [e.target.name]: e.target.value });
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
   onSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(this.state);
+    //this.props.onSubmit(this.state);
+    this.setState({
+      name: ""
+    });
+    this.props.onChange({
+      name: ""
+    });
   };
 
   render() {
     return (
       <form>
         <input
-          placeholder="name"
+          name="name"
+          placeholder="Name..."
           value={this.state.name}
-          onChange={e => this.setState({ name: e.target.value })}
+          onChange={e => this.change(e)}
         />
+        <br />
 
-        <button onClick={e => this.onSubmit(e)}>Add</button>
+        <Button onClick={e => this.onSubmit(e)}>Add</Button>
+        <br />
       </form>
     );
   }
 }
-
-export default Form;

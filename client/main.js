@@ -230,15 +230,27 @@ Meteor.startup(function _startup() {
       );
     };
 
-    onSubmit = fields => {
-      console.log("coming from main.js: ", fields);
+    state = {
+      fields: {}
+    };
+
+    onChange = updatedValue => {
+      this.setState({
+        fields: {
+          ...this.state.fields,
+          ...updatedValue
+        }
+      });
     };
 
     ReactDOM.render(
       <div>
         <NavBar />
         {/*<Welcome />*/}
-        <Form onSubmit={fields => this.onSubmit(fields)} />
+        <div className="app">
+          <Form onChange={fields => this.onChange(fields)} />
+          <p>{JSON.stringify(this.state.fields, null, 2)}</p>
+        </div>
         {/*<AddUser />*/}
 
         <Test />
