@@ -147,6 +147,86 @@ Meteor.startup(function _startup() {
             }}
             src="lunge.jpg"
           />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Plank:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="plank.jpg"
+          />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Press-Ups:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="pressup.jpg"
+          />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Russian Twist:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="russian.jpg"
+          />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Dumbbell Split Squat:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="split.jpg"
+          />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Chin Ups:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="chin.jpg"
+          />
         </div>
       );
     };
