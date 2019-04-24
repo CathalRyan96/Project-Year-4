@@ -12,6 +12,7 @@ import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
 import Testing from "./testing";
 import NavBar from "./navbar";
+import SitUp from "../situp.png";
 
 Meteor.startup(function _startup() {
   Tracker.autorun(function _Ready() {
@@ -74,11 +75,14 @@ Meteor.startup(function _startup() {
     const About = () => {
       return (
         <div>
-          <h2>
+          <p>
             The purpose of this application is to help people find gym exercises
-            suitable to the the sports they play.
-          </h2>
-          ;
+            suitable to the the sports they play. On this page you will able to
+            view images of the exercises described in order to be able to see
+            how exactly you can perform these exercises. The images can be seen
+            below:
+          </p>
+          <img src={SitUp} alt="situp" />
         </div>
       );
     };

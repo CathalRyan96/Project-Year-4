@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Button, Table } from "react-bootstrap";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
@@ -75,6 +75,7 @@ Meteor.startup(function _startup() {
         <li>
           {props.name}, {props.set}
         </li>
+        <img src="images/burpees.png" />
         <NavLink to="/">
           <Button> Home</Button>
         </NavLink>
@@ -230,7 +231,7 @@ Meteor.startup(function _startup() {
       );
     };
 
-    state = {
+    /*state = {
       fields: {}
     };
 
@@ -241,16 +242,13 @@ Meteor.startup(function _startup() {
           ...updatedValue
         }
       });
-    };
+    };*/
 
     ReactDOM.render(
       <div>
         <NavBar />
         {/*<Welcome />*/}
-        <div className="app">
-          <Form onChange={fields => this.onChange(fields)} />
-          <p>{JSON.stringify(this.state.fields, null, 2)}</p>
-        </div>
+
         {/*<AddUser />*/}
 
         <Test />
