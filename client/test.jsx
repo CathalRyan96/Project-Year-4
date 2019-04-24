@@ -12,7 +12,6 @@ import { Tracker } from "meteor/tracker";
 import { Exercises } from "../import/api/exercises";
 import Testing from "./testing";
 import NavBar from "./navbar";
-import SitUp from "../situp.png";
 
 Meteor.startup(function _startup() {
   Tracker.autorun(function _Ready() {
@@ -82,7 +81,72 @@ Meteor.startup(function _startup() {
             how exactly you can perform these exercises. The images can be seen
             below:
           </p>
-          <img src={SitUp} alt="situp" />
+          <NavLink to="/">
+            <Button> Home</Button>
+          </NavLink>
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Sit-ups:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "20%"
+            }}
+            src="situp.png"
+          />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Burpees:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="burpees.jpg"
+          />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Box-Jumps:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="box.jpg"
+          />
+
+          <p
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Lunges:
+          </p>
+          <img
+            style={{
+              display: "block",
+              margin: "auto",
+              width: "30%"
+            }}
+            src="lunge.jpg"
+          />
         </div>
       );
     };

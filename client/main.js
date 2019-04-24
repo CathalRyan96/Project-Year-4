@@ -75,7 +75,6 @@ Meteor.startup(function _startup() {
         <li>
           {props.name}, {props.set}
         </li>
-        <img src="images/burpees.png" />
         <NavLink to="/">
           <Button> Home</Button>
         </NavLink>
