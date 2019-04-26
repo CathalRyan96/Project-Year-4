@@ -247,6 +247,40 @@ These features include:
 
 I used Cmder throughout the project, mainly for my use of Git. I also used it when deploying my application to the local host. I did this by navigating to my project folder and entering the command "Meteor", which can be seen in the image below.
 
+\begin{center}    
+  \includegraphics{img/prompt1.png}
+  \end{center}
+  
+  \section{LaTeX}
+  LaTeX is a document preparation system. It provides features designed for the production of technical and scientific documentation\cite{LaTeX}. 
+  
+  I had only used LaTeX once before last semester in the "Research Methods" module in which we had to write a Literature Review in LaTeX. It was also recommended by our lecture to use it as they had already created a template from where we could start from.
+  
+  I enjoyed using LaTeX as in my opinion styles documents in a much more appealing way rather than using just plain text in programs such as Microsoft Word.
+  
+  \section{Heroku}
+  Heroku is a cloud platform service that supports many programming languages. It is one of the first cloud platforms as it has been in development since 2007. Back then it only supported the programming language called Ruby. However as of now it supports many languages such as Java, Node.js, Scala, Python and PHP\cite{Heroku}.
+  
+  For this project I deployed my application to Heroku. This was probably one of the most challenging parts of the project. I say this because, I had a lot of issues regarding connecting my Mongo datbase to my application on the cloud. After a lot of testing I finally came to the conclusion of hosting my database on a cloud service known as mLab. Here I created the collections that were present in my local database and connected it to my Heroku Application. As of now most of my application is being deployed on heroku, however some parts such as the about page are not appearing correctly and I am currently trying to figure out why I am getting this error. The application deployed on heroku can be found here:
+  
+  https://cryanfyp.herokuapp.com/
+  
+  
+  \section{mLab}
+  mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers such as Amazon, Google and Microsoft Azure.
+  
+  I used mLab to host my database in order for it to connect to my Heroku Application. I did this by creating the collections and documents which were present in my local database and used the Mongo URI to connect it to my Heroku application. 
+  
+  Images of the collections in the database  on mLab can be seen below:
+  \begin{center}    
+  \includegraphics{img/mongoC.png}
+  \end{center}
+  
+  Image of an example of a document in the database on mLab can be seen below:
+  \begin{center}    
+  \includegraphics{img/info.png}
+  \end{center}
+  
 
 \chapter{System Design}
 As many pages as needed.
