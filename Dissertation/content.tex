@@ -197,7 +197,36 @@ Visual Studio Code is a source code editor developed by Microsoft for Windows, L
 
 For this project, I used Visual Studio code to write all of the React and CSS code. The reasoning of this is because I have been using this program over the last few years and in my opinion is the best text editor out there at this point in time due to its many features such as the ones listed above.
 
+\section{Git}
+Git is a distributed version control system for tracking changes in source code during software development\cite{Git}. Git is used to track the progress of projects. 
+
+It does this by creating a local repository of your project on your machine. To start a local repository with git, all you have to do is navigate to your project folder and simply type:
+
+\begin{lstlisting}
+git init
+\end{lstlisting}
+
+This then creates a local repository on your machine. If you wanted to commit a change to the project you can by simply adding your changes to the project by using the following command:
+
+\begin{lstlisting}
+git add .
+\end{lstlisting}
+
+This command adds all of the changes that it can find in the project folder and add it to the local repository. If you then wanted to push these changes to GitHub, you must first add a remote origin to your local repository. This is done by using the following command:
+
+\begin{lstlisting}
+git remote add origin https://github.com/user/Project-name.git
+\end{lstlisting}
+
+The command above would link the local repository to a repository on GitHub which then you coud push all of the changes to by using the command below:
+
+\begin{lstlisting}
+git push -u origin master
+\end{lstlisting}
+
+
 \section{GitHub}
+
 
 \chapter{System Design}
 As many pages as needed.
