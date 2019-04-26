@@ -127,9 +127,15 @@ If I then wanted to use this function I would have to put it in a render functio
 \end{center}
 
 \section{MongoDB}
-The main reasoning for using a Mongo database for this project was because I had never used it within a project itself before. They only previous experience that I had with Mongo was a module which I did in my second year of my studies here at GMIT. However throughout this module, we only really covered the basic concepts of the databases such as creating a collection, inserting a document into a collection and deleting them.
+MongoDB is a cross-platform document oriented database program. Classified as a NoSQL datbase program, MongoDB uses JSON like documents with schemata\cite{MongoDB}. The main reasoning for using a Mongo database for this project was because I had never used it within a project itself before. They only previous experience that I had with Mongo was a module which I did in my second year of my studies here at GMIT. However throughout this module, we only really covered the basic concepts of the databases such as creating a collection, inserting a document into a collection and deleting them. While doing my research I debated on using an SQL database instead of Mongo. The main reasoning behind my choice to use mongo, was that I had already used SQL databases many times in the past and that I wanted to challenge myself and try something new.
 
-MongoDB is a cross-platform document oriented database program. Classified as a NoSQL datbase program, MongoDB uses JSON like documents with schemata\cite{MongoDB}
+The main differences between a Mongo database and a mySQL database would be:
+
+\begin{itemize}
+  \item In a Mongo database, data is represented in a collection of JSON documents, while in a SQL database, data is represented in tables and rows.
+  \item Another difference would be that mySQL databases supports atomic transactions. This means you can have multiple operations within a transaction and you can roll back if you have a single operation. MongoDB does not support atomic transactions.
+  \item Finally, when using MongoDB, you are not responsible for defining the schema. All you have to do is simply drop in the documents that you wish to store. In a SQL database, you have t define the tables and columns before you try to store anything.
+\end{itemize}
 
 \chapter{System Design}
 As many pages as needed.
