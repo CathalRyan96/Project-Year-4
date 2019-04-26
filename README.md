@@ -1,4 +1,4 @@
-## Project For Applied Project and Minor Dissertation Module
+# Project For Applied Project and Minor Dissertation Module
 
 | Project Details        |                                        |
 | ---------------------- | -------------------------------------- |
