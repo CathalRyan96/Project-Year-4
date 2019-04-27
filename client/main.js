@@ -246,10 +246,6 @@ Meteor.startup(function _startup() {
     ReactDOM.render(
       <div>
         <NavBar />
-        {/*<Welcome />*/}
-
-        {/*<AddUser />*/}
-
         <Test />
         <Router>
           <div>

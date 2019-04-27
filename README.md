@@ -43,6 +43,12 @@ In order to run this project you must insure you have the following downloaded a
 - [MongoDB](https://www.mongodb.com/)
 - [React](https://reactjs.org/)
 
+Once these are all downloaded and installed correctly, simply navigate to the project folder and type the following command:
+
+![met](https://user-images.githubusercontent.com/16310972/56849477-c6e55680-68ec-11e9-8842-a25b827def6a.png)
+
+If everything is working correctly the application will appear on the localhost port 3000 in any browser.
+
 ## Video
 
 https://www.youtube.com/watch?v=FBmDgi0eAQw&feature=youtu.be
