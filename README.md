@@ -11,8 +11,32 @@
 
 ## Main Concept
 
+The main objective of this project was to create a web application that helps the user find gym exercises suited to the sports that they play.
+I did this by creating a web application with three tiers.
+
+### Front End
+
+The front end of the project was developed in react and css. I had never used React before doing this project so it was a challenge at the start but I found the learning experience very beneficial in the end.
+
+### Middle Tier
+
+This tier involved two technologies which I also had not used before I did this project. The technologies being Heroku and mLab.
+
+### Back end
+
+The backend was also created by technologies which I had no previous experience of. These were Meteor and MongoDB.
+
 ## Features
+
+The main features of the project are:
+
+- The user is able to access the data from the Database on the application.
+- The user is able to use the application on a cloud platform(Heroku) , however as of know some features that work locally do not work on the cloud version.
+- The user is able to acces an Abot page which shows the user images of the exercises.
+-
 
 ## How to run
 
 ## Video
+
+https://www.youtube.com/watch?v=FBmDgi0eAQw&feature=youtu.be
