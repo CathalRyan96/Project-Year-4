@@ -32,10 +32,16 @@ The main features of the project are:
 
 - The user is able to access the data from the Database on the application.
 - The user is able to use the application on a cloud platform(Heroku) , however as of know some features that work locally do not work on the cloud version.
-- The user is able to acces an Abot page which shows the user images of the exercises.
--
+- The user is able to acces an About page which shows the user images of the exercises.
+- The user is able to access this GitHub repository by clicking a link in the navigation bar.
 
 ## How to run
+
+In order to run this project you must insure you have the following downloaded and installed:
+
+- [Meteor](https://www.meteor.com/install)
+- [MongoDB](https://www.mongodb.com/)
+- [React](https://reactjs.org/)
 
 ## Video
 
